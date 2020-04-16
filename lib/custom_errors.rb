@@ -1,6 +1,4 @@
 class Person
-  class PartnerError < StandardError
-  end
 
   attr_accessor :partner, :name
 
@@ -13,7 +11,10 @@ class Person
     person.partner = self
   end
 
+  class PartnerError < StandardError
+  end
 end
+
 
 beyonce = Person.new("Beyonce")
 beyonce.get_married("Jay-Z")
